@@ -29,7 +29,7 @@ Add it in your root build.gradle at the end of repositories
              
 Add the dependency      
 
-    implementation 'com.github.AmrDeveloper.ReactButton:reactbutton:1.0.7'
+    implementation 'com.github.Kapil-Bhattarai:ReactButton:v1'
             
 Default Case :
 
@@ -44,11 +44,7 @@ How To Initializing ReactButton :
 ReactButton reactButton = findViewById(R.id.buttonId);
 ```
 
-Set Six Reactions if you want to change Default Reactions:
 
-```java
-reactButton.setReactions(Reaction... reaction);
-```
 
 Set Current Reaction:
 
