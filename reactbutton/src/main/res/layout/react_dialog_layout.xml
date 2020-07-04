@@ -19,20 +19,25 @@
     <ImageButton
         android:id="@+id/imgButtonThree"
         style="@style/ReactImageButton"
-        android:src="@drawable/ic_happy" />
+        android:src="@drawable/ic_care" />
 
     <ImageButton
         android:id="@+id/imgButtonFour"
         style="@style/ReactImageButton"
-        android:src="@drawable/ic_surprise" />
+        android:src="@drawable/ic_happy" />
 
     <ImageButton
         android:id="@+id/imgButtonFive"
         style="@style/ReactImageButton"
-        android:src="@drawable/ic_sad" />
+        android:src="@drawable/ic_surprise" />
 
     <ImageButton
         android:id="@+id/imgButtonSix"
+        style="@style/ReactImageButton"
+        android:src="@drawable/ic_sad" />
+
+    <ImageButton
+        android:id="@+id/imgButtonSeven"
         style="@style/ReactImageButton"
         android:src="@drawable/ic_angry" />
 </LinearLayout>
