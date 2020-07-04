@@ -222,11 +222,9 @@ public class ReactButton
     private void reactButtonDefaultSetting() {
         mReactButton.setText(mDefaultReaction.getReactText());
         mReactButton.setOnClickListener(this);
-        mReactButton.setTypeface(null, Typeface.BOLD);
         mReactButton.setOnLongClickListener(this);
         mReactButton.setCompoundDrawablesWithIntrinsicBounds(mDefaultReaction.getReactIconId(), 0, 0, 0);
         mReactButton.setCompoundDrawablePadding(20);
-        mReactButton.setTextSize(17f);
     }
 
     /**
@@ -243,8 +241,6 @@ public class ReactButton
     private void updateReactButtonByReaction(Reaction react) {
         mCurrentReaction = react;
         mReactButton.setText(react.getReactText());
-        mReactButton.setTextSize(17f);
-        mReactButton.setTypeface(null, Typeface.BOLD);
         mReactButton.setTextColor(Color.parseColor(react.getReactTextColor()));
         mReactButton.setCompoundDrawablesWithIntrinsicBounds(react.getReactIconId(), 0, 0, 0);
         mReactButton.setCompoundDrawablePadding(20);
