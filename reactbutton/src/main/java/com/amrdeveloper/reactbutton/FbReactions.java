@@ -11,6 +11,7 @@ final class FbReactions {
     private static Reaction[] reactions = {
             new Reaction(ReactConstants.LIKE,ReactConstants.BLUE,R.drawable.ic_like),
             new Reaction(ReactConstants.LOVE,ReactConstants.RED_LOVE,R.drawable.ic_heart),
+            new Reaction(ReactConstants.CARE,ReactConstants.ORANGE_CARE,R.drawable.ic_care),
             new Reaction(ReactConstants.SMILE,ReactConstants.YELLOW_WOW,R.drawable.ic_happy),
             new Reaction(ReactConstants.WOW,ReactConstants.YELLOW_WOW,R.drawable.ic_surprise),
             new Reaction(ReactConstants.SAD,ReactConstants.YELLOW_HAHA,R.drawable.ic_sad),

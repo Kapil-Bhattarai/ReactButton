@@ -13,13 +13,15 @@ final class ReactConstants {
     static final String YELLOW_HAHA = "#fde99c";
     static final String YELLOW_WOW = "#f0ba15";
     static final String GRAY = "#616770";
+    static final String ORANGE_CARE = "#EDA83A";
 
     //Text Constants
     static final String DEFAULT = "Default";
     static final String LIKE = "Like";
     static final String LOVE = "Love";
-    static final String SMILE = "Smile";
+    static final String SMILE = "Haha";
     static final String WOW = "Wow";
     static final String SAD = "Sad";
     static final String ANGRY = "Angry";
+    static final String CARE = "Care";
 }

@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -14,10 +15,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 @SuppressLint("AppCompatCustomView")
 public class ReactButton
-        extends Button
+        extends TextView
         implements View.OnClickListener, View.OnLongClickListener {
 
     /**
@@ -46,11 +48,12 @@ public class ReactButton
     private ImageButton mImgButtonFour;
     private ImageButton mImgButtonFive;
     private ImageButton mImgButtonSix;
+    private ImageButton mImgButtonSeven;
 
     /**
      * Number of Valid Reactions
      */
-    private static final int REACTIONS_NUMBER = 6;
+    private static final int REACTIONS_NUMBER = 7;
 
     /**
      * Array of ImagesButton to set any action for all
@@ -126,7 +129,7 @@ public class ReactButton
      * Show Reaction dialog when user long click on react button
      */
     private void onLongClickDialog() {
-        //Show Dialog With 6 React
+        //Show Dialog With 7 React
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
 
         //Irrelevant code for customizing the buttons and title
@@ -158,6 +161,7 @@ public class ReactButton
         mImgButtonFour = view.findViewById(R.id.imgButtonFour);
         mImgButtonFive = view.findViewById(R.id.imgButtonFive);
         mImgButtonSix = view.findViewById(R.id.imgButtonSix);
+        mImgButtonSeven = view.findViewById(R.id.imgButtonSeven);
     }
 
     /**
@@ -170,6 +174,7 @@ public class ReactButton
         mReactImgArray[3] = mImgButtonFour;
         mReactImgArray[4] = mImgButtonFive;
         mReactImgArray[5] = mImgButtonSix;
+        mReactImgArray[6] = mImgButtonSeven;
     }
 
     /**
@@ -182,6 +187,7 @@ public class ReactButton
         imgButtonSetListener(mImgButtonFour, 3);
         imgButtonSetListener(mImgButtonFive, 4);
         imgButtonSetListener(mImgButtonSix, 5);
+        imgButtonSetListener(mImgButtonSeven, 6);
     }
 
     /**
@@ -216,8 +222,11 @@ public class ReactButton
     private void reactButtonDefaultSetting() {
         mReactButton.setText(mDefaultReaction.getReactText());
         mReactButton.setOnClickListener(this);
+        mReactButton.setTypeface(null, Typeface.BOLD);
         mReactButton.setOnLongClickListener(this);
         mReactButton.setCompoundDrawablesWithIntrinsicBounds(mDefaultReaction.getReactIconId(), 0, 0, 0);
+        mReactButton.setCompoundDrawablePadding(20);
+        mReactButton.setTextSize(17f);
     }
 
     /**
@@ -234,8 +243,11 @@ public class ReactButton
     private void updateReactButtonByReaction(Reaction react) {
         mCurrentReaction = react;
         mReactButton.setText(react.getReactText());
+        mReactButton.setTextSize(17f);
+        mReactButton.setTypeface(null, Typeface.BOLD);
         mReactButton.setTextColor(Color.parseColor(react.getReactTextColor()));
         mReactButton.setCompoundDrawablesWithIntrinsicBounds(react.getReactIconId(), 0, 0, 0);
+        mReactButton.setCompoundDrawablePadding(20);
         mCurrentReactState = !react.getReactType().equals(mDefaultReaction.getReactType());
     }
 
